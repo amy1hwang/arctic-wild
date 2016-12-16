@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.top-container {
+  @include structure('bg-top.jpg', 500px);
+
+}
+
+.nav-bar {
+  max-width: 767px;
+  padding: 0 35px 0 5%;
+  display: flex;
+  justify-content: space-between;
+ .logo {
+     @include size(40px auto);
+     vertical-align: middle;
+  }
+  .nav-bar-logo {
+    &:hover {
+      svg {
+        path, polygon {
+          fill: orange;
+        }
+      }
+    }
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      &:first-child {
+        width: 40px;
+      }
+      &:last-child {
+        width: 135px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+body {
+  overflow-x: hidden;
+  @include transition(transform .5s ease 0s);
+}
+
+.mobile-menu {
+  position: absolute;
+  right: -250px;
+  top: 0;
+  background: #343433;
+  @include size(250px 1081px);
+  padding: 30px;
+}
+
+.main-ul {
+  margin-top: 30px;
+}
+
+.sub-ul {
+  margin-bottom: 30px;
+}
+
+.js-navbar-open {
+  @include transform(translateX(-250px));
+}
+
+
+.cards-card {
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+.cards-card-icon {
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  background: orange;
+}
+.cards-card-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+}
+
+.main-content {
+  margin-top: 20px;
+  @include size(100% 333px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  text-align: center;
+}
+
+.white-border {
+  @include border(250px, 5px, white)
+}

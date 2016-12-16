@@ -1,0 +1,44 @@
+.top-container {
+  color: white;
+  font-weight: 100;
+}
+
+a {
+  @include clearfix;
+  color: white;
+  text-decoration: none;
+}
+
+.main-ul li {
+  padding: 12px 0;
+  list-style: none;
+  font-family: 'Fjalla One';
+  color: $dark-gray;
+  font-size: 1.6em;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.sub-ul li {
+  padding: 8px 0;
+  list-style: none;
+  font-family: 'Open Sans', sans-serif;
+  color: $light-gray;
+  font-weight: lighter;
+  font-size: .88em;
+  letter-spacing: 0;
+  border-bottom: 1px solid $dark-gray;
+}
+
+.text{
+  h3 {
+    font-size: .8em;
+    font-family: 'Fjalla One';
+    letter-spacing: 4px;
+  }
+  h1 {
+    font-size: 3.3em;
+    font-family: 'FreightBigBook';
+    font-weight: 900;
+  }
+}
