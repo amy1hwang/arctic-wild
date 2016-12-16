@@ -19,7 +19,7 @@ a {
 .main-ul li {
   padding: 12px 0;
   list-style: none;
-  color: #646461, inherit;
+  color: #646461;
   font-size: 1.6em;
   font-family: "Fjalla One";
   font-weight: bold;
@@ -28,7 +28,7 @@ a {
 .sub-ul li {
   padding: 8px 0;
   list-style: none;
-  color: #e0e0e0, inherit;
+  color: #e0e0e0;
   font-size: 0.88em;
   font-family: '"Open Sans", sans-serif';
   font-weight: lighter;
@@ -36,13 +36,13 @@ a {
   border-bottom: 1px solid #646461; }
 
 .text h3 {
-  color: inherit, inherit;
+  color: inherit;
   font-size: 1.3em;
   font-family: "Fjalla One";
   font-weight: lighter;
   letter-spacing: 4px; }
 .text h1 {
-  color: inherit, inherit;
+  color: inherit;
   font-size: 8em;
   font-family: "FreightBigBook";
   font-weight: 900; }
@@ -51,10 +51,10 @@ a {
   position: absolute;
   bottom: 40px;
   left: 40px;
-  color: inherit, inherit;
+  color: white;
   font-size: 1.4em;
   font-family: "Fjalla One";
-  font-weight: normal; }
+  font-weight: bold; }
 
 .mobile-menu-btn {
   margin-top: 30px;
@@ -97,7 +97,7 @@ a {
   width: 180px;
   border-radius: 3px;
   text-align: center;
-  color: inherit, inherit;
+  color: inherit;
   font-size: 0.9em;
   font-family: "Fjalla One";
   font-weight: normal;
@@ -127,6 +127,113 @@ a {
   .card-btn:hover {
     transform: scale(1.2);
     background: rgba(50, 50, 50, 0.7); }
+
+.floating-nav-wrapper {
+  background: #333333;
+  background-size: cover;
+  background-position: center;
+  height: 80px; }
+
+.floating-nav {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333333;
+  background-size: cover;
+  background-position: center;
+  height: 80px; }
+
+.floating-nav-menu {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  color: #a6a6a6;
+  width: 430px; }
+  .floating-nav-menu > li {
+    height: 40px;
+    list-style: none;
+    color: inherit;
+    font-size: 1.05em;
+    font-family: arial;
+    font-weight: normal; }
+
+.gray {
+  padding-top: 10px; }
+  .gray:hover {
+    color: white; }
+
+.white {
+  padding-top: 10px;
+  color: white; }
+  .white:hover {
+    color: #dc7725; }
+
+.orange {
+  border-left: 1px solid #5a5a5a;
+  padding-top: 1px;
+  position: relative; }
+  .orange p {
+    display: inline-block;
+    margin-left: 25px;
+    color: #dc7725;
+    padding: 10px; }
+  .orange img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -5px;
+    margin-top: -1px; }
+  .orange .more {
+    display: none; }
+  .orange:hover p {
+    background: #404040;
+    color: #dc7725; }
+  .orange:hover img {
+    background: #404040; }
+  .orange:hover .more {
+    position: absolute;
+    color: silver;
+    display: none;
+    background: #404040;
+    border-radius: 2px;
+    display: block;
+    top: 40px;
+    left: 25px;
+    width: 200px;
+    z-index: 2; }
+
+.more li {
+  padding: 15px 20px;
+  color: #8d8d8d;
+  font-size: 0.9em;
+  font-family: arial;
+  font-weight: lighter;
+  list-style: none;
+  border-bottom: 1px solid #8d8d8d; }
+  .more li:hover {
+    color: white; }
+
+.no-border {
+  border-bottom: 0; }
+
+.floating-nav-search {
+  display: flex;
+  justify-content: space-between;
+  color: #a6a6a6;
+  width: 95px; }
+  .floating-nav-search h3 {
+    color: inherit;
+    font-size: 1.2em;
+    font-family: arial;
+    font-weight: 500;
+    margin-top: 10px; }
+    .floating-nav-search h3:hover {
+      color: white; }
+  .floating-nav-search img {
+    vertical-align: middle; }
 
 * {
   margin: 0;
@@ -170,7 +277,7 @@ body {
     position: relative;
     padding: 15px 10px;
     list-style: none;
-    color: white, inherit;
+    color: white;
     font-size: 0.9em;
     font-family: "Fjalla One";
     font-weight: normal;
@@ -199,7 +306,7 @@ body {
       color: white; }
   .menu-sub li {
     padding: 15px 20px;
-    color: #8d8d8d, inherit;
+    color: #8d8d8d;
     font-size: 1em;
     font-family: arial;
     font-weight: lighter;

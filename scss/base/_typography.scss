@@ -35,6 +35,6 @@ a {
   position: absolute;
   bottom: 40px;
   left: 40px;
-  @include font(inherit, 1.4em, 'Fjalla One', normal, null);
+  @include font(white, 1.4em, 'Fjalla One', bold, null);
 
 }

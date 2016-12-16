@@ -6,7 +6,7 @@
 }
 
 @mixin font($color, $size, $family, $weight, $spacing) {
-  color: $color,inherit;
+  color: $color;
   font-size: $size;
   font-family: $family;
   font-weight: $weight;
