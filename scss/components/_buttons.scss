@@ -29,9 +29,7 @@
   width: 180px;
   border-radius: 3px;
   text-align: center;
-  font-size: .9em;
-  font-family: 'Fjalla One';
-  letter-spacing: 2px;
+  @include font(inherit, .9em, 'Fjalla One', normal, 2px);
   padding: 20px 30px;
 }
 

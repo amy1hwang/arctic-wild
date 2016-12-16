@@ -12,35 +12,22 @@ a {
 .main-ul li {
   padding: 12px 0;
   list-style: none;
-  font-family: 'Fjalla One';
-  color: $dark-gray;
-  font-size: 1.6em;
-  letter-spacing: 2px;
-  font-weight: bold;
+  @include font($dark-gray, 1.6em, 'Fjalla One', bold, 2px);
 }
 
 .sub-ul li {
   padding: 8px 0;
   list-style: none;
-  font-family: 'Open Sans', sans-serif;
-  color: $dirty-white;
-  font-weight: lighter;
-  font-size: .88em;
-  letter-spacing: 0;
+  @include font($dirty-white, .88em, '"Open Sans", sans-serif', lighter, 0);
   border-bottom: 1px solid $dark-gray;
 }
 
 .text{
   h3 {
-    font-size: 1.3em;
-    font-family: 'Fjalla One';
-    letter-spacing: 4px;
-    font-weight: lighter;
+    @include font(inherit, 1.3em, 'Fjalla One', lighter, 4px);
   }
   h1 {
-    font-size: 8em;
-    font-family: 'FreightBigBook';
-    font-weight: 900;
+    @include font(inherit, 8em, 'FreightBigBook', 900, null);
   }
 }
 
@@ -48,7 +35,6 @@ a {
   position: absolute;
   bottom: 40px;
   left: 40px;
-  color: white;
-  font-family: 'Fjalla One';
-  font-size: 1.4em;
+  @include font(inherit, 1.4em, 'Fjalla One', normal, null);
+
 }

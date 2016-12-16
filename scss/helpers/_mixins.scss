@@ -5,6 +5,14 @@
   height: $height;
 }
 
+@mixin font($color, $size, $family, $weight, $spacing) {
+  color: $color,inherit;
+  font-size: $size;
+  font-family: $family;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+}
+
 @mixin hover-btn($size, $color, $a, $trans-time, $img-width, $img-height, $scale, $hover-a) {
   border-radius: 100px;
   width: $size;

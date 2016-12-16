@@ -19,39 +19,42 @@ a {
 .main-ul li {
   padding: 12px 0;
   list-style: none;
-  font-family: 'Fjalla One';
-  color: #646461;
+  color: #646461, inherit;
   font-size: 1.6em;
-  letter-spacing: 2px;
-  font-weight: bold; }
+  font-family: "Fjalla One";
+  font-weight: bold;
+  letter-spacing: 2px; }
 
 .sub-ul li {
   padding: 8px 0;
   list-style: none;
-  font-family: 'Open Sans', sans-serif;
-  color: #e0e0e0;
+  color: #e0e0e0, inherit;
+  font-size: 0.88em;
+  font-family: '"Open Sans", sans-serif';
   font-weight: lighter;
-  font-size: .88em;
   letter-spacing: 0;
   border-bottom: 1px solid #646461; }
 
 .text h3 {
+  color: inherit, inherit;
   font-size: 1.3em;
-  font-family: 'Fjalla One';
-  letter-spacing: 4px;
-  font-weight: lighter; }
+  font-family: "Fjalla One";
+  font-weight: lighter;
+  letter-spacing: 4px; }
 .text h1 {
+  color: inherit, inherit;
   font-size: 8em;
-  font-family: 'FreightBigBook';
+  font-family: "FreightBigBook";
   font-weight: 900; }
 
 .cards-card-text {
   position: absolute;
   bottom: 40px;
   left: 40px;
-  color: white;
-  font-family: 'Fjalla One';
-  font-size: 1.4em; }
+  color: inherit, inherit;
+  font-size: 1.4em;
+  font-family: "Fjalla One";
+  font-weight: normal; }
 
 .mobile-menu-btn {
   margin-top: 30px;
@@ -94,8 +97,10 @@ a {
   width: 180px;
   border-radius: 3px;
   text-align: center;
-  font-size: .9em;
-  font-family: 'Fjalla One';
+  color: inherit, inherit;
+  font-size: 0.9em;
+  font-family: "Fjalla One";
+  font-weight: normal;
   letter-spacing: 2px;
   padding: 20px 30px; }
 
@@ -161,22 +166,47 @@ body {
   width: 700px;
   display: flex;
   justify-content: space-between; }
-  .menu li {
+  .menu > li {
+    position: relative;
     padding: 15px 10px;
     list-style: none;
-    font-family: 'Fjalla One';
-    font-size: .9em;
+    color: white, inherit;
+    font-size: 0.9em;
+    font-family: "Fjalla One";
+    font-weight: normal;
     letter-spacing: 2px; }
-    .menu li:first-of-type, .menu li:last-of-type {
-      margin-top: 2px; }
-    .menu li img {
+    .menu > li img {
       vertical-align: middle; }
-    .menu li:hover {
+    .menu > li:hover {
       background: #404040;
-      border-radius: 5px; }
-      .menu li:hover:first-of-type, .menu li:hover:last-of-type {
+      border-radius: 2px; }
+      .menu > li:hover > .menu-sub {
+        display: block; }
+      .menu > li:hover:first-of-type, .menu > li:hover:last-of-type {
         background: none;
         color: #dc7725; }
+
+.menu-sub {
+  display: none;
+  background: #404040;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  width: 250px; }
+  .menu-sub a {
+    color: silver; }
+    .menu-sub a:hover {
+      color: white; }
+  .menu-sub li {
+    padding: 15px 20px;
+    color: #8d8d8d, inherit;
+    font-size: 1em;
+    font-family: arial;
+    font-weight: lighter;
+    list-style: none;
+    border-bottom: 1px solid #8d8d8d; }
+  .menu-sub .no-border {
+    border-bottom: 0; }
 
 .mobile-menu {
   position: absolute;
