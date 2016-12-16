@@ -56,7 +56,8 @@ a {
 .mobile-menu-btn {
   margin-top: 30px;
   cursor: pointer;
-  width: 30px; }
+  width: 30px;
+  display: none; }
   .mobile-menu-btn span {
     display: block;
     width: 100%;
@@ -126,6 +127,12 @@ a {
   margin: 0;
   padding: 0; }
 
+body {
+  overflow-x: hidden;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  -moz-transition: -moz-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s; }
+
 .top-container {
   background: url("../img/bg-top.jpg");
   background-size: cover;
@@ -148,11 +155,28 @@ a {
       width: 180px;
       margin-left: 5px; }
 
-body {
-  overflow-x: hidden;
-  -webkit-transition: -webkit-transform 0.5s ease 0s;
-  -moz-transition: -moz-transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s; }
+.menu {
+  margin-top: 30px;
+  height: 50px;
+  width: 700px;
+  display: flex;
+  justify-content: space-between; }
+  .menu li {
+    padding: 15px 10px;
+    list-style: none;
+    font-family: 'Fjalla One';
+    font-size: .9em;
+    letter-spacing: 2px; }
+    .menu li:first-of-type, .menu li:last-of-type {
+      margin-top: 2px; }
+    .menu li img {
+      vertical-align: middle; }
+    .menu li:hover {
+      background: #404040;
+      border-radius: 5px; }
+      .menu li:hover:first-of-type, .menu li:hover:last-of-type {
+        background: none;
+        color: #dc7725; }
 
 .mobile-menu {
   position: absolute;

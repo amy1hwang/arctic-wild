@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+  @include transition(transform .5s ease 0s);
+}
+
 .top-container {
   @include structure(url('../img/bg-top.jpg'), 755px);
 }
@@ -33,9 +38,32 @@
   }
 }
 
-body {
-  overflow-x: hidden;
-  @include transition(transform .5s ease 0s);
+.menu {
+  margin-top: 30px;
+  @include size(700px 50px);
+  display: flex;
+  justify-content: space-between;
+  li {
+    padding: 15px 10px;
+    list-style: none;
+    font-family: 'Fjalla One';
+    font-size: .9em;
+    letter-spacing: 2px;
+    &:first-of-type, &:last-of-type {
+      margin-top: 2px;
+    }
+    img {
+      vertical-align: middle;
+    }
+    &:hover {
+      background: $nav-gray;
+      border-radius: 5px;
+      &:first-of-type, &:last-of-type {
+        background: none;
+        color: $orange;
+      }
+    }
+  }
 }
 
 .mobile-menu {
