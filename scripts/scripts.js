@@ -3,3 +3,13 @@ $(function() {
     $("body").toggleClass('js-navbar-open');
   })
 });
+
+var num = 725; //number of pixels before modifying styles
+
+$(window).bind('scroll', function () {
+    if ($(window).scrollTop() > num) {
+        $('.sticky-nav-wrapper').addClass('fixed');
+    } else {
+        $('.sticky-nav-wrapper').removeClass('fixed');
+    }
+});
