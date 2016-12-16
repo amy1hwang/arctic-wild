@@ -104,6 +104,24 @@ a {
   align-items: flex-start;
   justify-content: center; }
 
+.card-btn {
+  border-radius: 100px;
+  width: 90px;
+  height: 90px;
+  background: rgba(50, 50, 50, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  -moz-transition: -moz-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s; }
+  .card-btn img {
+    width: 40px;
+    height: 40px; }
+  .card-btn:hover {
+    transform: scale(1.2);
+    background: rgba(50, 50, 50, 0.7); }
+
 * {
   margin: 0;
   padding: 0; }
@@ -186,6 +204,15 @@ body {
   background-position: center;
   height: 1733px; }
 
+.card-btn-wrapper {
+  background-size: cover;
+  background-position: center;
+  height: 90px;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .cards-row {
   display: flex;
   height: 400px;
@@ -199,6 +226,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     position: relative; }
+    .cards-row .cards-card-raft:hover .card-btn {
+      transform: scale(1.2);
+      background: rgba(50, 50, 50, 0.7); }
   .cards-row .cards-card-basecamp {
     height: 400px;
     background: url("../img/bg-basecamp.jpg");
@@ -208,6 +238,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     position: relative; }
+    .cards-row .cards-card-basecamp:hover .card-btn {
+      transform: scale(1.2);
+      background: rgba(50, 50, 50, 0.7); }
   .cards-row .cards-card-backpacking {
     height: 400px;
     background: url("../img/bg-backpacking.jpg");
@@ -217,6 +250,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     position: relative; }
+    .cards-row .cards-card-backpacking:hover .card-btn {
+      transform: scale(1.2);
+      background: rgba(50, 50, 50, 0.7); }
   .cards-row .cards-card-canoe {
     height: 400px;
     background: url("../img/bg-canoe.jpg");
@@ -226,6 +262,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     position: relative; }
+    .cards-row .cards-card-canoe:hover .card-btn {
+      transform: scale(1.2);
+      background: rgba(50, 50, 50, 0.7); }
   .cards-row .cards-card-photo {
     height: 400px;
     background: url("../img/bg-photo.jpg");
@@ -235,6 +274,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     position: relative; }
+    .cards-row .cards-card-photo:hover .card-btn {
+      transform: scale(1.2);
+      background: rgba(50, 50, 50, 0.7); }
   .cards-row .cards-card-custom {
     height: 400px;
     background: url("../img/bg-custom.jpg");
@@ -244,6 +286,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     position: relative; }
+    .cards-row .cards-card-custom:hover .card-btn {
+      transform: scale(1.2);
+      background: rgba(50, 50, 50, 0.7); }
 
 .cards-card-icon {
   width: 40px;

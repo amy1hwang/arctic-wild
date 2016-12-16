@@ -86,6 +86,14 @@ body {
   @include structure($light-gray, 1733px);
 }
 
+.card-btn-wrapper {
+  @include structure(null, 90px);
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cards-row {
   display: flex;
   @include size(100% 400px);
@@ -96,7 +104,6 @@ body {
   @include card(photo, bg-photo, 1);
   @include card(custom, bg-custom, 2);
 }
-
 
 .cards-card-icon {
   @include border(40px, 5px, $orange);
