@@ -2,25 +2,20 @@
   margin: 0;
   padding: 0;
 }
-.top-container {
-  @include structure('bg-top.jpg', 500px);
 
+.top-container {
+  @include structure(url('../img/bg-top.jpg'), 755px);
 }
 
 .nav-bar {
-  max-width: 767px;
-  padding: 0 35px 0 5%;
+  padding: 40px 6%;
   display: flex;
   justify-content: space-between;
- .logo {
-     @include size(40px auto);
-     vertical-align: middle;
-  }
   .nav-bar-logo {
     &:hover {
       svg {
         path, polygon {
-          fill: orange;
+          fill: $orange;
         }
       }
     }
@@ -28,10 +23,10 @@
       display: inline-block;
       vertical-align: middle;
       &:first-child {
-        width: 40px;
+        width: 50px;
       }
       &:last-child {
-        width: 135px;
+        @include size(180px 50px);
         margin-left: 5px;
       }
     }
@@ -64,31 +59,8 @@ body {
   @include transform(translateX(-250px));
 }
 
-
-.cards-card {
-  background-size: cover;
-  height: 500px;
-  position: relative;
-}
-.cards-card-icon {
-  width: 40px;
-  height: 4px;
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  color: white;
-  background: orange;
-}
-.cards-card-text {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  color: white;
-}
-
 .main-content {
-  margin-top: 20px;
-  @include size(100% 333px);
+  @include size(100% 393px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -101,4 +73,34 @@ body {
 
 .white-border {
   @include border(250px, 5px, white)
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.cards {
+  @include structure($light-gray, 1733px);
+}
+
+.cards-row {
+  display: flex;
+  @include size(100% 400px);
+  @include card(raft, bg-raft, 2);
+  @include card(basecamp, bg-basecamp, 1);
+  @include card(backpacking, bg-backpacking, 1);
+  @include card(canoe, bg-canoe, 1);
+  @include card(photo, bg-photo, 1);
+  @include card(custom, bg-custom, 2);
+}
+
+
+.cards-card-icon {
+  @include border(40px, 5px, $orange);
+  position: absolute;
+  bottom: 90px;
+  left: 40px;
 }

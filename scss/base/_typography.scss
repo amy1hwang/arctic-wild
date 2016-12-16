@@ -23,7 +23,7 @@ a {
   padding: 8px 0;
   list-style: none;
   font-family: 'Open Sans', sans-serif;
-  color: $light-gray;
+  color: $dirty-white;
   font-weight: lighter;
   font-size: .88em;
   letter-spacing: 0;
@@ -32,13 +32,23 @@ a {
 
 .text{
   h3 {
-    font-size: .8em;
+    font-size: 1.3em;
     font-family: 'Fjalla One';
     letter-spacing: 4px;
+    font-weight: lighter;
   }
   h1 {
-    font-size: 3.3em;
+    font-size: 8em;
     font-family: 'FreightBigBook';
     font-weight: 900;
   }
+}
+
+.cards-card-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  font-family: 'Fjalla One';
+  font-size: 1.4em;
 }

@@ -1,5 +1,5 @@
 @mixin structure($background, $height) {
-  background: url(#{$img}#{$background});
+  background: $background;
   background-size:cover;
   background-position: center;
   height: $height;
@@ -45,6 +45,17 @@
   background: $bg-color;
 }
 
-
-
+@mixin card($class, $bg-img, $flex-grow) {
+  .cards-card-#{$class} {
+    $url: "../img/#{$bg-img}.jpg";
+    height: 400px;
+    background: url($url);
+    flex-basis: auto;
+    flex-grow: $flex-grow;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+}
 // breakpoint: 767px
