@@ -264,6 +264,9 @@ body {
       font-family: "Fjalla One";
       font-weight: lighter;
       letter-spacing: 4px; }
+      @media screen and (max-width: 770px) {
+        .main-content .text h3 {
+          font-size: 1em; } }
     .main-content .text h1 {
       color: inherit;
       font-size: 8em;
@@ -272,6 +275,9 @@ body {
       @media screen and (max-width: 960px) {
         .main-content .text h1 {
           font-size: 5em; } }
+      @media screen and (max-width: 770px) {
+        .main-content .text h1 {
+          font-size: 4em; } }
   .main-content .white-border {
     width: 250px;
     height: 5px;
@@ -729,6 +735,9 @@ body {
     .experience-text {
       min-width: 100%;
       padding: 100px 10% 0 10%; } }
+  @media screen and (max-width: 450px) {
+    .experience-text {
+      padding: 70px 3%; } }
 
 .button-span {
   display: flex;
@@ -747,6 +756,10 @@ body {
     border-radius: 3px; }
     .button-span button:hover {
       background: #f7801f; }
+    @media screen and (max-width: 770px) {
+      .button-span button {
+        width: 100%;
+        margin-bottom: 30px; } }
   .button-span span {
     margin-left: 20px;
     padding-bottom: 5px;
@@ -761,6 +774,15 @@ body {
     @media screen and (max-width: 960px) {
       .button-span span {
         font-size: 1em; } }
+    @media screen and (max-width: 770px) {
+      .button-span span {
+        margin-left: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); } }
+    @media screen and (max-width: 450px) {
+      .button-span span {
+        font-size: 0.9em; } }
   @media screen and (max-width: 960px) {
     .button-span {
       display: flex;
@@ -772,15 +794,7 @@ body {
       max-width: 542px;
       margin-left: auto;
       margin-right: auto;
-      position: relative; }
-      .button-span button {
-        width: 100%;
-        margin-bottom: 30px; }
-      .button-span span {
-        margin-left: 0;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); } }
+      position: relative; } }
 
 .experience-img {
   flex-grow: 1; }

@@ -176,11 +176,17 @@
     text-align: center;
     h3 {
       @include font(inherit, 1.3em, 'Fjalla One', lighter, 4px);
+      @include media(max-width 770px) {
+        font-size: 1em;
+      }
     }
     h1 {
       @include font(inherit, 8em, 'FreightBigBook', 900, null);
       @include media(max-width 960px) {
         font-size: 5em;
+      }
+      @include media(max-width 770px) {
+        font-size: 4em;
       }
     }
   }

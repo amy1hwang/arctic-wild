@@ -55,7 +55,9 @@
   @include media(max-width 960px) {
     min-width: 100%;
     padding: 100px 10% 0 10%;
-
+  }
+  @include media(max-width 450px) {
+    padding: 70px 3%;
   }
 }
 .button-span {
@@ -71,6 +73,10 @@
     &:hover {
       background: $bright-orange;
     }
+    @include media(max-width 770px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
   span {
     margin-left: 20px;
@@ -82,6 +88,15 @@
     }
     @include media(max-width 960px) {
       font-size: 1em;
+    }
+    @include media(max-width 770px) {
+      margin-left: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include media(max-width 450px) {
+      font-size: 0.9em;
     }
   }
   @include media(max-width 960px) {
@@ -95,21 +110,12 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    button {
-      width: 100%;
-      margin-bottom: 30px;
-    }
-    span {
-      margin-left: 0;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
   }
 }
+
 .experience-img{
   flex-grow: 1;
-    @include media(max-width 960px) {
-      display: none;
-    }
+  @include media(max-width 960px) {
+    display: none;
+  }
 }
