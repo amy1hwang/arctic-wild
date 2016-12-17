@@ -22,8 +22,12 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 1100px;
+  @include media(max-width 1150px) {
+    max-width: 960px;
+    padding: auto 30%;
+  }
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   @include structure(darken($nav-gray, 5%), 80px);
 }
@@ -31,13 +35,16 @@
 .sticky-nav-menu {
   display: flex;
   height: 80px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 430px;
   & > li {
     height: 40px;
     list-style: none;
     @include font(lighten($nav-gray, 40%), 1.05em, arial, normal, null);
+    @include media(max-width 1150px) {
+      font-size: .9em;
+    }
   }
 }
 .gray{
@@ -110,7 +117,7 @@
 
 .sticky-nav-search {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   color: lighten($nav-gray, 40%);
   width: 95px;
   h3 {
@@ -118,6 +125,9 @@
     margin-top: 10px;
     &:hover {
       color: white;
+    }
+    @include media(max-width 1150px) {
+      font-size: 1em;
     }
   }
   img {
