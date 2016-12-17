@@ -96,15 +96,15 @@ body {
   width: 250px;
   a{
     color: lighten($nav-gray, 50%);
-    &:hover {
-      color: white;
-    }
   }
   li {
     padding: 15px 20px;
     @include font(lighten($nav-gray, 30%), 1em, arial, lighter, null);
     list-style: none;
     border-bottom: 1px solid lighten($nav-gray, 30%);
+    &:hover {
+      color: white;
+    }
   }
   .no-border {
     border-bottom: 0;
@@ -240,6 +240,82 @@ body {
     }
   }
 }
-.experience-container img{
+.experience-img{
   flex-grow: 1;
+}
+
+.testimonials-container {
+  @include structure(#e6e6e0 url(../img/bg-testimonials.jpg) center no-repeat, 592px);
+  background-size: contain;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #cfcfc8;
+}
+
+.tesimonials {
+  height: 390px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.testimonials-text {
+  width: 840px;
+  .client5 {
+    text-align: center;
+    line-height: 50px;
+    @include font(lighten($nav-gray, 10%), 1.7em, 'Fjalla One', null, 1px)
+  }
+}
+
+.testimonials-img {
+  margin: 100px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  @include border(840px, 1px, darken(#cfcfc8, 10%));
+  .previous, .next {
+    display: absolute;
+    transform: translateY(-50%);
+    @include size(35px);
+    border-radius: 100px;
+    background: #c7c7c7;
+    @include transition(background .3s ease 0s);
+    &:hover {
+      background: darken(#c7c7c7, 5%);
+    }
+  }
+  .previous {
+    padding: 8px 0 0 8px;
+  }
+  .next {
+    padding: 8px 0 0 6px;
+  }
+}
+
+.testimonials-img-border {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 560px;
+  img {
+    border-radius: 100px;
+    @include size(61.75px);
+    vertical-align: middle;
+    margin: 0 20px;
+  }
+  .img-client5 {
+    @include size(97px);
+  }
+}
+
+.client-name h3{
+  @include font(lighten($nav-gray, 20%), 1.4em, 'FreightBigBook', 900, null);
+  text-align: center;
+  span {
+    @include font(lighten($nav-gray, 20%), .8em, arial, normal, null);
+  }
 }
