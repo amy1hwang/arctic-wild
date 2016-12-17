@@ -1,15 +1,15 @@
 $(function() {
   $(".mobile-menu-btn").on('click', function() {
     $("body").toggleClass('js-navbar-open');
-  })
-});
+  });
 
-var num = 725; //number of pixels before modifying styles
+  var num = $(".sticky-nav").offset().top;
 
-$(window).bind('scroll', function () {
+  $(window).bind('scroll', function () {
     if ($(window).scrollTop() > num) {
-        $('.sticky-nav-wrapper').addClass('fixed');
+      $('.sticky-nav-wrapper').addClass('fixed');
     } else {
-        $('.sticky-nav-wrapper').removeClass('fixed');
+      $('.sticky-nav-wrapper').removeClass('fixed');
     }
+  });
 });
