@@ -4,6 +4,9 @@
   justify-content: flex-start;
   @include structure(#e6e6e0, 712px);
   border-bottom: 2px solid #cfcfc8;
+  @include media(max-width 960px) {
+    justify-content: center;
+  }
 }
 
 .experience-text {
@@ -13,14 +16,25 @@
   .border {
     @include border(100px, 5px, #c9c9c2);
     margin: 30px 0;
+    @include media(max-width 960px) {
+      margin: 30px auto;
+    }
   }
   h3 {
     text-align: left;
     @include font(lighten($nav-gray, 30%), 1.2em, 'Fjalla One', normal, 2px);
+    @include media(max-width 960px) {
+      font-size: .9em;
+      text-align: center;
+    }
   }
   h1 {
     text-align: left;
     @include font(black, 3.3em, 'FreightBigBook', 900, 3px);
+    @include media(max-width 960px) {
+      font-size: 2em;
+      text-align: center;
+    }
   }
   a {
     color: $orange;
@@ -33,7 +47,21 @@
     @include font(lighten($nav-gray, 20%), 1.15em, arial, normal, null);
     line-height: 27px;
     margin-bottom: 30px;
+    @include media(max-width 960px) {
+      font-size: 1em;
+      text-align: center;
+    }
   }
+  @include media(max-width 960px) {
+    min-width: 100%;
+    padding: 100px 10% 0 10%;
+
+  }
+}
+.button-span {
+  display: flex;
+  justify-content: flex-start;;
+  align-items: center;
   button {
     background: $orange;
     @include font(white, .9em, 'Fjalla One', normal, 2px);
@@ -47,13 +75,41 @@
   span {
     margin-left: 20px;
     padding-bottom: 5px;
-    @include font(lighten($nav-gray, 15%), 1.15em, arial, bold, null);
+    @include font(lighten($nav-gray, 15%), 1em, arial, bold, .5px);
     border-bottom: 1px dashed lighten($nav-gray, 35%);
     &:hover {
       color: $orange;
+    }
+    @include media(max-width 960px) {
+      font-size: 1em;
+    }
+  }
+  @include media(max-width 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include media(max-width 770px) {
+    display: block;
+    max-width: 542px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    button {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    span {
+      margin-left: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
 .experience-img{
   flex-grow: 1;
+    @include media(max-width 960px) {
+      display: none;
+    }
 }

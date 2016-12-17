@@ -1,6 +1,12 @@
 
 .cards {
   @include structure($light-gray, 800px);
+  @include media(max-width 960px) {
+    height: 1600px;
+  }
+  @include media(max-width 770px) {
+    height: 1780px
+  }
 }
 
 .card-btn-wrapper {
@@ -8,18 +14,41 @@
   margin-top: 150px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  @include media(max-width 770px) {
+    margin-top: 75px;
+  }
 }
 
-.cards-row {
+.cards-row1 {
   display: flex;
-  @include size(100% 400px);
-  @include card(raft, bg-raft, 2);
-  @include card(basecamp, bg-basecamp, 1);
-  @include card(backpacking, bg-backpacking, 1);
-  @include card(canoe, bg-canoe, 1);
-  @include card(photo, bg-photo, 1);
-  @include card(custom, bg-custom, 2);
+  flex-wrap: wrap;
+  @include card(raft, bg-raft, 2, 480.5px);
+  @include card(basecamp, bg-basecamp, 1, 240px);
+  @include card(backpacking, bg-backpacking, 1, 240px);
+  @include media(max-width 960px) {
+    @include card(raft, bg-raft, 2, 800px);
+    @include card(basecamp, bg-basecamp, 1, 241px);
+    @include card(backpacking, bg-backpacking, 1, 241px);
+  }
+  @include media(max-width 770px) {
+    .cards-card-basecamp{
+        margin: 40px 0;
+    }
+  }
+}
+
+.cards-row2 {
+  display: flex;
+  flex-wrap: wrap;
+  @include card(canoe, bg-canoe, 1, 240px);
+  @include card(photo, bg-photo, 1, 240px);
+  @include card(custom, bg-custom, 2, 480.5px);
+  @include media(max-width 770px) {
+    padding-bottom: 40px;
+    .cards-card-photo{
+        margin: 40px 0;
+    }
+  }
 }
 
 .cards-card-icon {

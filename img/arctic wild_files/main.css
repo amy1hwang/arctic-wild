@@ -771,16 +771,12 @@ body {
       display: block;
       max-width: 542px;
       margin-left: auto;
-      margin-right: auto;
-      position: relative; }
+      margin-right: auto; }
       .button-span button {
-        width: 100%;
-        margin-bottom: 30px; }
+        width: 100%; }
       .button-span span {
-        margin-left: 0;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); } }
+        margin: 30px auto;
+        text-align: center; } }
 
 .experience-img {
   flex-grow: 1; }

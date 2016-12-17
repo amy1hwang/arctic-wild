@@ -5,6 +5,9 @@
   top: 725px;
   z-index: 3;
   @include structure(darken($nav-gray, 5%), 80px);
+  @include media(max-width 960px) {
+    display: none;
+  }
 }
 
 .fixed {
