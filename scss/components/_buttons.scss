@@ -2,6 +2,7 @@
 
 .mobile-menu-btn {
   margin-top: 30px;
+  margin-right: 70px;
   cursor: pointer;
   width: 30px;
   display: none;
@@ -11,6 +12,10 @@
     height: 2px;
     background: white;
     margin: 5px 0;
+  }
+  @include media(min-width 770px, max-width 960px) {
+    display: block;
+    margin-right: 30px;
   }
 }
 

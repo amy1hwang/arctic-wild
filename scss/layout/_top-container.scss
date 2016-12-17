@@ -1,0 +1,203 @@
+
+.top-container {
+  @include structure(url('../img/bg-top.jpg'), 805px);
+  color: white;
+  font-weight: 100;
+  a {
+    @include clearfix;
+    color: white;
+    text-decoration: none;
+  }
+  @include media(min-width 770px, max-width 960px) {
+    height: 500px;
+  }
+}
+
+.nav-bar {
+  padding: 40px 6%;
+  display: flex;
+  justify-content: space-between;
+  .nav-bar-logo {
+    &:hover {
+      svg {
+        path, polygon {
+          fill: $orange;
+        }
+      }
+    }
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      &:first-child {
+        width: 50px;
+        @include media(min-width 770px, max-width 960px) {
+          width: 40px;
+        }
+      }
+      &:last-child {
+        @include size(180px 50px);
+        margin-left: 5px;
+        @include media(min-width 770px, max-width 960px) {
+          @include size(144px 50px);
+        }
+      }
+    }
+  }
+  @include media(max-width 1150px) {
+    padding: 40px 5%;
+    padding-right: 0px;
+  }
+  @include media(min-width 770px, max-width 960px) {
+    padding: 20px 4% 0 4%;
+  }
+}
+
+//min-width: 961px;
+
+.menu {
+  margin-top: 30px;
+  @include size(700px 50px);
+  @include media(max-width 1150px) {
+    @include size(650px 50px);
+  }
+  display: flex;
+  justify-content: space-between;
+  & > li {
+    position: relative;
+    padding: 15px 10px;
+    list-style: none;
+    @include font(white, .9em, 'Fjalla One', normal, 2px);
+    &:first-of-type, &:last-of-type {
+      img {
+        opacity: 0;
+      }
+    }
+    @include media(max-width 1150px) {
+      font-size: .7em;
+      width: 650px;
+      padding: 15px 5px;
+      &:first-of-type, &:last-of-type {
+        padding: 15px 0;
+      }
+    }
+    img {
+      vertical-align: middle;
+      padding: 0;
+    }
+    &:hover {
+      background: $nav-gray;
+      border-radius: 2px;
+      & > .menu-sub {
+        display: block;
+      }
+      &:first-of-type, &:last-of-type {
+        background: none;
+        color: $orange;
+      }
+    }
+  }
+  @include media(min-width 770px, max-width 960px) {
+    display: none;
+  }
+}
+
+.menu-sub {
+  display: none;
+  background: $nav-gray;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  width: 250px;
+  a{
+    color: lighten($nav-gray, 50%);
+  }
+  li {
+    padding: 15px 20px;
+    @include font(lighten($nav-gray, 30%), 1em, arial, lighter, null);
+    list-style: none;
+    border-bottom: 1px solid lighten($nav-gray, 30%);
+    &:hover {
+      color: white;
+    }
+  }
+  .no-border {
+    border-bottom: 0;
+  }
+  @include media(min-width 770px, max-width 960px) {
+    display: block;
+  }
+}
+
+//max-width: 960px;
+
+.mobile-menu {
+  position: absolute;
+  right: -250px;
+  top: 0;
+  background: #343433;
+  @include size(250px 100%);
+  padding: 30px;
+}
+
+.main-ul {
+  margin-top: 30px;
+}
+
+.sub-ul {
+  margin-bottom: 30px;
+}
+
+.main-ul li {
+  padding: 12px 0;
+  list-style: none;
+  @include font($dark-gray, 1.6em, 'Fjalla One', bold, 2px);
+}
+
+.sub-ul li {
+  padding: 8px 0;
+  list-style: none;
+  @include font($dirty-white, .88em, arial, lighter, 0);
+  border-bottom: 1px solid $dark-gray;
+}
+
+
+.js-navbar-open {
+  @include transform(translateX(-250px));
+}
+
+
+.main-content {
+  @include size(100% 393px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .text {
+    text-align: center;
+    h3 {
+      @include font(inherit, 1.3em, 'Fjalla One', lighter, 4px);
+    }
+    h1 {
+      @include font(inherit, 8em, 'FreightBigBook', 900, null);
+      @include media(min-width 770px, max-width 960px) {
+        font-size: 5em;
+      }
+    }
+  }
+  .white-border {
+    @include border(250px, 5px, white)
+  }
+  @include media(min-width 770px, max-width 960px) {
+    @include size(100% 353px);
+  }
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  @include media(min-width 770px, max-width 960px) {
+    display: none;
+  }
+}

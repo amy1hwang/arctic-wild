@@ -4,59 +4,9 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.top-container {
-  color: white;
-  font-weight: 100; }
-  .top-container a {
-    color: white;
-    text-decoration: none; }
-    .top-container a::after {
-      clear: both;
-      content: "";
-      display: block; }
-
-.main-ul li {
-  padding: 12px 0;
-  list-style: none;
-  color: #646461;
-  font-size: 1.6em;
-  font-family: "Fjalla One";
-  font-weight: bold;
-  letter-spacing: 2px; }
-
-.sub-ul li {
-  padding: 8px 0;
-  list-style: none;
-  color: #e0e0e0;
-  font-size: 0.88em;
-  font-family: '"Open Sans", sans-serif';
-  font-weight: lighter;
-  letter-spacing: 0;
-  border-bottom: 1px solid #646461; }
-
-.text h3 {
-  color: inherit;
-  font-size: 1.3em;
-  font-family: "Fjalla One";
-  font-weight: lighter;
-  letter-spacing: 4px; }
-.text h1 {
-  color: inherit;
-  font-size: 8em;
-  font-family: "FreightBigBook";
-  font-weight: 900; }
-
-.cards-card-text {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  color: white;
-  font-size: 1.4em;
-  font-family: "Fjalla One";
-  font-weight: bold; }
-
 .mobile-menu-btn {
   margin-top: 30px;
+  margin-right: 70px;
   cursor: pointer;
   width: 30px;
   display: none; }
@@ -66,6 +16,10 @@ html {
     height: 2px;
     background: white;
     margin: 5px 0; }
+  @media screen and (min-width: 770px) {
+    .mobile-menu-btn {
+      display: block;
+      margin-right: 30px; } }
 
 .play-btn {
   margin-top: 10px;
@@ -126,6 +80,215 @@ html {
   .card-btn:hover {
     transform: scale(1.2);
     background: rgba(50, 50, 50, 0.7); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  -moz-transition: -moz-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s; }
+
+.top-container {
+  background: url("../img/bg-top.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 805px;
+  color: white;
+  font-weight: 100; }
+  .top-container a {
+    color: white;
+    text-decoration: none; }
+    .top-container a::after {
+      clear: both;
+      content: "";
+      display: block; }
+  @media screen and (min-width: 770px) {
+    .top-container {
+      height: 500px; } }
+
+.nav-bar {
+  padding: 40px 6%;
+  display: flex;
+  justify-content: space-between; }
+  .nav-bar .nav-bar-logo:hover svg path, .nav-bar .nav-bar-logo:hover svg polygon {
+    fill: #dc7725; }
+  .nav-bar .nav-bar-logo svg {
+    display: inline-block;
+    vertical-align: middle; }
+    .nav-bar .nav-bar-logo svg:first-child {
+      width: 50px; }
+      @media screen and (min-width: 770px) {
+        .nav-bar .nav-bar-logo svg:first-child {
+          width: 40px; } }
+    .nav-bar .nav-bar-logo svg:last-child {
+      height: 50px;
+      width: 180px;
+      margin-left: 5px; }
+      @media screen and (min-width: 770px) {
+        .nav-bar .nav-bar-logo svg:last-child {
+          height: 50px;
+          width: 144px; } }
+  @media screen and (max-width: 1150px) {
+    .nav-bar {
+      padding: 40px 5%;
+      padding-right: 0px; } }
+  @media screen and (min-width: 770px) {
+    .nav-bar {
+      padding: 20px 4% 0 4%; } }
+
+.menu {
+  margin-top: 30px;
+  height: 50px;
+  width: 700px;
+  display: flex;
+  justify-content: space-between; }
+  @media screen and (max-width: 1150px) {
+    .menu {
+      height: 50px;
+      width: 650px; } }
+  .menu > li {
+    position: relative;
+    padding: 15px 10px;
+    list-style: none;
+    color: white;
+    font-size: 0.9em;
+    font-family: "Fjalla One";
+    font-weight: normal;
+    letter-spacing: 2px; }
+    .menu > li:first-of-type img, .menu > li:last-of-type img {
+      opacity: 0; }
+    @media screen and (max-width: 1150px) {
+      .menu > li {
+        font-size: .7em;
+        width: 650px;
+        padding: 15px 5px; }
+        .menu > li:first-of-type, .menu > li:last-of-type {
+          padding: 15px 0; } }
+    .menu > li img {
+      vertical-align: middle;
+      padding: 0; }
+    .menu > li:hover {
+      background: #404040;
+      border-radius: 2px; }
+      .menu > li:hover > .menu-sub {
+        display: block; }
+      .menu > li:hover:first-of-type, .menu > li:hover:last-of-type {
+        background: none;
+        color: #dc7725; }
+  @media screen and (min-width: 770px) {
+    .menu {
+      display: none; } }
+
+.menu-sub {
+  display: none;
+  background: #404040;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  width: 250px; }
+  .menu-sub a {
+    color: silver; }
+  .menu-sub li {
+    padding: 15px 20px;
+    color: #8d8d8d;
+    font-size: 1em;
+    font-family: arial;
+    font-weight: lighter;
+    list-style: none;
+    border-bottom: 1px solid #8d8d8d; }
+    .menu-sub li:hover {
+      color: white; }
+  .menu-sub .no-border {
+    border-bottom: 0; }
+  @media screen and (min-width: 770px) {
+    .menu-sub {
+      display: block; } }
+
+.mobile-menu {
+  position: absolute;
+  right: -250px;
+  top: 0;
+  background: #343433;
+  height: 100%;
+  width: 250px;
+  padding: 30px; }
+
+.main-ul {
+  margin-top: 30px; }
+
+.sub-ul {
+  margin-bottom: 30px; }
+
+.main-ul li {
+  padding: 12px 0;
+  list-style: none;
+  color: #646461;
+  font-size: 1.6em;
+  font-family: "Fjalla One";
+  font-weight: bold;
+  letter-spacing: 2px; }
+
+.sub-ul li {
+  padding: 8px 0;
+  list-style: none;
+  color: #e0e0e0;
+  font-size: 0.88em;
+  font-family: arial;
+  font-weight: lighter;
+  letter-spacing: 0;
+  border-bottom: 1px solid #646461; }
+
+.js-navbar-open {
+  -webkit-transform: translateX(-250px);
+  -moz-transform: translateX(-250px);
+  -ms-transform: translateX(-250px);
+  -o-transform: translateX(-250px);
+  transform: translateX(-250px); }
+
+.main-content {
+  height: 393px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  .main-content .text {
+    text-align: center; }
+    .main-content .text h3 {
+      color: inherit;
+      font-size: 1.3em;
+      font-family: "Fjalla One";
+      font-weight: lighter;
+      letter-spacing: 4px; }
+    .main-content .text h1 {
+      color: inherit;
+      font-size: 8em;
+      font-family: "FreightBigBook";
+      font-weight: 900; }
+      @media screen and (min-width: 770px) {
+        .main-content .text h1 {
+          font-size: 5em; } }
+  .main-content .white-border {
+    width: 250px;
+    height: 5px;
+    background: white; }
+  @media screen and (min-width: 770px) {
+    .main-content {
+      height: 353px;
+      width: 100%; } }
+
+.bottom-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; }
+  @media screen and (min-width: 770px) {
+    .bottom-content {
+      display: none; } }
 
 .sticky-nav-wrapper {
   position: absolute;
@@ -257,149 +420,6 @@ html {
   .sticky-nav-search img {
     vertical-align: middle; }
 
-* {
-  margin: 0;
-  padding: 0; }
-
-body {
-  width: 100%;
-  overflow-x: hidden;
-  -webkit-transition: -webkit-transform 0.5s ease 0s;
-  -moz-transition: -moz-transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s; }
-
-.top-container {
-  background: url("../img/bg-top.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 805px; }
-
-.nav-bar {
-  padding: 40px 6%;
-  display: flex;
-  justify-content: space-between; }
-  .nav-bar .nav-bar-logo:hover svg path, .nav-bar .nav-bar-logo:hover svg polygon {
-    fill: #dc7725; }
-  .nav-bar .nav-bar-logo svg {
-    display: inline-block;
-    vertical-align: middle; }
-    .nav-bar .nav-bar-logo svg:first-child {
-      width: 50px; }
-    .nav-bar .nav-bar-logo svg:last-child {
-      height: 50px;
-      width: 180px;
-      margin-left: 5px; }
-  @media screen and (max-width: 1150px) {
-    .nav-bar {
-      padding: 40px 5%;
-      padding-right: 0px; } }
-
-.menu {
-  margin-top: 30px;
-  height: 50px;
-  width: 700px;
-  display: flex;
-  justify-content: space-between; }
-  @media screen and (max-width: 1150px) {
-    .menu {
-      height: 50px;
-      width: 650px; } }
-  .menu > li {
-    position: relative;
-    padding: 15px 10px;
-    list-style: none;
-    color: white;
-    font-size: 0.9em;
-    font-family: "Fjalla One";
-    font-weight: normal;
-    letter-spacing: 2px; }
-    .menu > li:first-of-type img, .menu > li:last-of-type img {
-      opacity: 0; }
-    @media screen and (max-width: 1150px) {
-      .menu > li {
-        font-size: .7em;
-        width: 650px;
-        padding: 15px 5px; }
-        .menu > li:first-of-type, .menu > li:last-of-type {
-          padding: 15px 0; } }
-    .menu > li img {
-      vertical-align: middle;
-      padding: 0; }
-    .menu > li:hover {
-      background: #404040;
-      border-radius: 2px; }
-      .menu > li:hover > .menu-sub {
-        display: block; }
-      .menu > li:hover:first-of-type, .menu > li:hover:last-of-type {
-        background: none;
-        color: #dc7725; }
-
-.menu-sub {
-  display: none;
-  background: #404040;
-  position: absolute;
-  top: 40px;
-  left: 0px;
-  width: 250px; }
-  .menu-sub a {
-    color: silver; }
-  .menu-sub li {
-    padding: 15px 20px;
-    color: #8d8d8d;
-    font-size: 1em;
-    font-family: arial;
-    font-weight: lighter;
-    list-style: none;
-    border-bottom: 1px solid #8d8d8d; }
-    .menu-sub li:hover {
-      color: white; }
-  .menu-sub .no-border {
-    border-bottom: 0; }
-
-.mobile-menu {
-  position: absolute;
-  right: -250px;
-  top: 0;
-  background: #343433;
-  height: 1081px;
-  width: 250px;
-  padding: 30px; }
-
-.main-ul {
-  margin-top: 30px; }
-
-.sub-ul {
-  margin-bottom: 30px; }
-
-.js-navbar-open {
-  -webkit-transform: translateX(-250px);
-  -moz-transform: translateX(-250px);
-  -ms-transform: translateX(-250px);
-  -o-transform: translateX(-250px);
-  transform: translateX(-250px); }
-
-.main-content {
-  height: 393px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
-
-.text {
-  text-align: center; }
-
-.white-border {
-  width: 250px;
-  height: 5px;
-  background: white; }
-
-.bottom-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px; }
-
 .cards {
   background: #d1d1c9;
   background-size: cover;
@@ -499,6 +519,15 @@ body {
   position: absolute;
   bottom: 90px;
   left: 40px; }
+
+.cards-card-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  font-size: 1.4em;
+  font-family: "Fjalla One";
+  font-weight: bold; }
 
 .experience-container {
   display: flex;

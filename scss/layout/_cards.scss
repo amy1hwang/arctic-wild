@@ -1,0 +1,37 @@
+
+.cards {
+  @include structure($light-gray, 800px);
+}
+
+.card-btn-wrapper {
+  @include structure(null, 90px);
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-row {
+  display: flex;
+  @include size(100% 400px);
+  @include card(raft, bg-raft, 2);
+  @include card(basecamp, bg-basecamp, 1);
+  @include card(backpacking, bg-backpacking, 1);
+  @include card(canoe, bg-canoe, 1);
+  @include card(photo, bg-photo, 1);
+  @include card(custom, bg-custom, 2);
+}
+
+.cards-card-icon {
+  @include border(40px, 5px, $orange);
+  position: absolute;
+  bottom: 90px;
+  left: 40px;
+}
+
+.cards-card-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  @include font(white, 1.4em, 'Fjalla One', bold, null);
+}
