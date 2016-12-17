@@ -77,6 +77,9 @@
       width: 100%;
       margin-bottom: 30px;
     }
+    @include media(max-width 450px) {
+      margin-bottom: 60px;
+    }
   }
   span {
     margin-left: 20px;
