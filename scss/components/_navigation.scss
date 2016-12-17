@@ -33,12 +33,11 @@
   height: 80px;
   justify-content: space-between;
   align-items: center;
-  color: lighten($nav-gray, 40%);
   width: 430px;
   & > li {
     height: 40px;
     list-style: none;
-    @include font(inherit, 1.05em, arial, normal, null);
+    @include font(lighten($nav-gray, 40%), 1.05em, arial, normal, null);
   }
 }
 .gray{

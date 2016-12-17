@@ -1,13 +1,13 @@
 .top-container {
   color: white;
   font-weight: 100;
+  a {
+    @include clearfix;
+    color: white;
+    text-decoration: none;
+  }
 }
 
-a {
-  @include clearfix;
-  color: white;
-  text-decoration: none;
-}
 
 .main-ul li {
   padding: 12px 0;

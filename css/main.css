@@ -7,14 +7,13 @@ html {
 .top-container {
   color: white;
   font-weight: 100; }
-
-a {
-  color: white;
-  text-decoration: none; }
-  a::after {
-    clear: both;
-    content: "";
-    display: block; }
+  .top-container a {
+    color: white;
+    text-decoration: none; }
+    .top-container a::after {
+      clear: both;
+      content: "";
+      display: block; }
 
 .main-ul li {
   padding: 12px 0;
@@ -164,12 +163,11 @@ a {
   height: 80px;
   justify-content: space-between;
   align-items: center;
-  color: #a6a6a6;
   width: 430px; }
   .sticky-nav-menu > li {
     height: 40px;
     list-style: none;
-    color: inherit;
+    color: #a6a6a6;
     font-size: 1.05em;
     font-family: arial;
     font-weight: normal; }
@@ -253,6 +251,7 @@ a {
   padding: 0; }
 
 body {
+  width: 100%;
   overflow-x: hidden;
   -webkit-transition: -webkit-transform 0.5s ease 0s;
   -moz-transition: -moz-transform 0.5s ease 0s;
@@ -279,6 +278,10 @@ body {
       height: 50px;
       width: 180px;
       margin-left: 5px; }
+  @media screen and (max-width: 1150px) {
+    .nav-bar {
+      padding: 40px 5%;
+      padding-right: 0px; } }
 
 .menu {
   margin-top: 30px;
@@ -286,6 +289,10 @@ body {
   width: 700px;
   display: flex;
   justify-content: space-between; }
+  @media screen and (max-width: 1150px) {
+    .menu {
+      height: 50px;
+      width: 650px; } }
   .menu > li {
     position: relative;
     padding: 15px 10px;
@@ -295,8 +302,18 @@ body {
     font-family: "Fjalla One";
     font-weight: normal;
     letter-spacing: 2px; }
+    .menu > li:first-of-type img, .menu > li:last-of-type img {
+      opacity: 0; }
+    @media screen and (max-width: 1150px) {
+      .menu > li {
+        font-size: .7em;
+        width: 650px;
+        padding: 15px 5px; }
+        .menu > li:first-of-type, .menu > li:last-of-type {
+          padding: 15px 0; } }
     .menu > li img {
-      vertical-align: middle; }
+      vertical-align: middle;
+      padding: 0; }
     .menu > li:hover {
       background: #404040;
       border-radius: 2px; }
@@ -376,7 +393,7 @@ body {
   background: #d1d1c9;
   background-size: cover;
   background-position: center;
-  height: 1733px; }
+  height: 800px; }
 
 .card-btn-wrapper {
   background-size: cover;
@@ -471,5 +488,76 @@ body {
   position: absolute;
   bottom: 90px;
   left: 40px; }
+
+.experience-container {
+  display: flex;
+  justify-content: flex-start;
+  background: #e6e6e0;
+  background-size: cover;
+  background-position: center;
+  height: 712px;
+  border-bottom: 2px solid #cfcfc8; }
+
+.experience-text {
+  min-width: 740px;
+  flex-grow: 1;
+  padding: 100px 0 0 10%; }
+  .experience-text .border {
+    width: 100px;
+    height: 5px;
+    background: #c9c9c2;
+    margin: 30px 0; }
+  .experience-text h3 {
+    text-align: left;
+    color: #8d8d8d;
+    font-size: 1.2em;
+    font-family: "Fjalla One";
+    font-weight: normal;
+    letter-spacing: 2px; }
+  .experience-text h1 {
+    text-align: left;
+    color: black;
+    font-size: 3.3em;
+    font-family: "FreightBigBook";
+    font-weight: 900;
+    letter-spacing: 3px; }
+  .experience-text a {
+    color: #dc7725; }
+    .experience-text a:hover {
+      color: #f7801f; }
+  .experience-text p {
+    text-align: left;
+    color: #737373;
+    font-size: 1.15em;
+    font-family: arial;
+    font-weight: normal;
+    line-height: 27px;
+    margin-bottom: 30px; }
+  .experience-text button {
+    background: #dc7725;
+    color: white;
+    font-size: 0.9em;
+    font-family: "Fjalla One";
+    font-weight: normal;
+    letter-spacing: 2px;
+    height: 60px;
+    width: 152px;
+    border: 0;
+    border-radius: 3px; }
+    .experience-text button:hover {
+      background: #f7801f; }
+  .experience-text span {
+    margin-left: 20px;
+    padding-bottom: 5px;
+    color: #666666;
+    font-size: 1.15em;
+    font-family: arial;
+    font-weight: bold;
+    border-bottom: 1px dashed #999999; }
+    .experience-text span:hover {
+      color: #dc7725; }
+
+.experience-container img {
+  flex-grow: 1; }
 
 /*# sourceMappingURL=main.css.map */
